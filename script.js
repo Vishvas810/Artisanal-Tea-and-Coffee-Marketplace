@@ -10,8 +10,9 @@ document.getElementById('registerForm').addEventListener('submit', function(even
     // Validate the form data
     if (validateRegistration(name, email, password)) {
         // Display a success message if validation is successful
-        document.getElementById('message').style.color = '#007BFF'; // Set message color
-        document.getElementById('message').textContent = 'Registration successful!';
+        let message = document.getElementById('message');
+        message.className = 'message-success';
+        message.textContent = 'Registration successful!';
     }
 });
 
@@ -21,6 +22,7 @@ function validateRegistration(name, email, password) {
     
     // Check if any field is empty
     if (!name || !email || !password) {
+        message.className = 'message-error';
         message.textContent = 'All fields are required.';
         return false;
     }
@@ -28,12 +30,14 @@ function validateRegistration(name, email, password) {
     // Validate the email format using a regular expression
     let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
+        message.className = 'message-error';
         message.textContent = 'Please enter a valid email address.';
         return false;
     }
     
     // Validate the password length
     if (password.length < 6) {
+        message.className = 'message-error';
         message.textContent = 'Password must be at least 6 characters long.';
         return false;
     }

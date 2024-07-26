@@ -115,6 +115,16 @@ button:hover {
     font-size: 14px;
 }
 
+/* Success message color */
+.message-success {
+    color: #4BB543; /* Green color for success */
+}
+
+/* Error message color */
+.message-error {
+    color: #ff4c4c; /* Red color for error */
+}
+
 /* Style for paragraph text */
 p {
     margin-top: 10px;

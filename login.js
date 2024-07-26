@@ -9,8 +9,9 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     // Validate the login data
     if (validateLogin(email, password)) {
         // Display a success message if validation is successful
-        document.getElementById('loginMessage').style.color = '#007BFF'; // Set message color
-        document.getElementById('loginMessage').textContent = 'Login successful!';
+        let message = document.getElementById('loginMessage');
+        message.className = 'message-success';
+        message.textContent = 'Login successful!';
     }
 });
 
@@ -20,6 +21,7 @@ function validateLogin(email, password) {
     
     // Check if any field is empty
     if (!email || !password) {
+        message.className = 'message-error';
         message.textContent = 'Both fields are required.';
         return false;
     }
@@ -27,12 +29,14 @@ function validateLogin(email, password) {
     // Validate the email format using a regular expression
     let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
+        message.className = 'message-error';
         message.textContent = 'Please enter a valid email address.';
         return false;
     }
     
     // Validate the password length
     if (password.length < 6) {
+        message.className = 'message-error';
         message.textContent = 'Password must be at least 6 characters long.';
         return false;
     }
