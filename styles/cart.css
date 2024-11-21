@@ -1,0 +1,64 @@
+/* General styling for the shopping cart page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Styling for the shopping cart table */
+#cart-items {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#cart-items th, #cart-items td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+#cart-items th {
+    background-color: #f4f4f4;
+}
+
+/* Styling for the remove icon */
+.remove-item {
+    color: #e74c3c; /* Red color for the trash icon */
+    cursor: pointer;
+}
+
+.remove-item:hover {
+    color: #c0392b; /* Darker red for hover effect */
+}
+
+/* Styling for the cart summary */
+.cart-summary {
+    margin-top: 20px;
+}
+
+/* Checkout button styling */
+#checkout-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #3498db;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Transition effect */
+}
+
+/* Hover Effect */
+#checkout-button:hover {
+    background-color: #2980b9;
+}

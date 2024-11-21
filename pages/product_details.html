@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <!-- Link to the CSS file for styling -->
+    <link rel="stylesheet" href="../styles/product_details.css">
+    <!-- Link to jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../files/jquery.cycle.all.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="product_listing.html" class="back-button"><i class="fas fa-arrow-left"></i> Back</a>
+            <div class="navbar-right">
+                <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content section -->
+    <div class="container">
+        <!-- Product details section -->
+        <section class="product-details">
+            <!-- Product image - Cycle Plugin -->
+            <div class="product-image">
+                <div id="cycle-right"></div>
+            </div>
+            <!-- Product information -->
+            <div class="product-info">
+                <h1 id="product-name">Product Name</h1>
+                <p id="product-price">Price: $0.00</p>
+                <p id="product-quantity">Available Quantity: 0</p>
+                <!-- Add to Cart Button -->
+                <button id="add-to-cart">Add to Cart</button>
+            </div>
+        </section>
+
+        <!-- Related Products section -->
+        <section class="related-products">
+            <h2>Related Products</h2>
+            <div id="related-products-container">
+                <!-- Related products will be loaded here dynamically -->
+            </div>
+        </section>
+        
+        <!-- User Feedback section -->
+        <section class="user-feedback">
+            <h2>Feedback</h2>
+            <form id="feedback-form">
+                <div class="input-group">
+                    <label for="feedback-name">Name:</label>
+                    <input type="text" id="feedback-name" name="feedback-name" placeholder="Your Name" required>
+                </div>
+                <div class="input-group">
+                    <label for="feedback-message">Message:</label>
+                    <textarea id="feedback-message" name="feedback-message" placeholder="Your Feedback" required></textarea>
+                </div>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Link to the JavaScript file for functionality -->
+    <script src="../scripts/product_details.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Link to the CSS file for styling -->
+    <link rel="stylesheet" href="../styles/contact_us.css">
+    <!-- Link to FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="product_listing.html" class="back-button"><i class="fas fa-arrow-left"></i> Back</a>
+            <h1>Contact Us</h1>
+        </div>
+    </nav>
+
+    <!-- Main content section -->
+    <div class="container">
+        <!-- Contact Form Section -->
+        <section class="contact-form">
+            <h2>We'd Love to Hear From You!</h2>
+            <!-- Form for user contact -->
+            <form id="contactForm">
+                <!-- Input for user's name -->
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <!-- Input for user's email -->
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <!-- Textarea for user's message -->
+                <div class="input-group">
+                    <i class="fas fa-comment"></i>
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                </div>
+                <!-- Submit button for the contact form -->
+                <button type="submit">Send Message</button>
+            </form>
+            <!-- Container for displaying validation or success messages -->
+            <div id="contactMessage"></div>
+        </section>
+    </div>
+
+    <!-- Link to the JavaScript file for form functionality -->
+    <script src="../scripts/contact_us.js"></script>
+</body>
+</html>

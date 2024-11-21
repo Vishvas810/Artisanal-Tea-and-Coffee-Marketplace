@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="../styles/user_profile.css"> <!-- Link to CSS for styling -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Link to FontAwesome for icons -->
+</head>
+<body>
+    <!-- Navigation bar with a back button and page title -->
+    <div class="navbar">
+        <a href="product_listing.html" class="back-button"><i class="fas fa-arrow-left"></i> Back</a>
+        <h1>User Profile</h1>
+    </div>
+    <div class="container">
+        <!-- User profile form -->
+        <form id="userProfileForm">
+            <!-- Email input field, read-only -->
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" value="vishvas@gmail.com" readonly>
+            </div>
+            <!-- Full name input field, read-only -->
+            <div class="input-group">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" value="Vishvas Patel" readonly>
+            </div>
+            <!-- Phone number input field, read-only -->
+            <div class="input-group">
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" name="phone" value="123-456-789-0" readonly>
+            </div>
+            <!-- Edit and Save buttons -->
+            <button type="button" id="editButton">Edit</button>
+            <button type="button" id="saveButton" style="display: none;">Save</button>
+        </form>
+    </div>
+    <script src="../scripts/user_profile.js"></script> <!-- Link to JavaScript for functionality -->
+</body>
+</html>

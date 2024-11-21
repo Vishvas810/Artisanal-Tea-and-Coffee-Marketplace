@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <!-- Link to the CSS file for styling -->
+    <link rel="stylesheet" href="../styles/cart.css">
+    <!-- Link to jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="product_listing.html" class="back-button"><i class="fas fa-arrow-left"></i> Back to Products</a>
+        </div>
+    </nav>
+
+    <!-- Main content section -->
+    <div class="container">
+        <!-- Shopping Cart section -->
+        <section class="shopping-cart">
+            <h1>Your Shopping Cart</h1>
+            <table id="cart-items">
+                <!-- Cart items will be dynamically added here -->
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Cart items rows -->
+                </tbody>
+            </table>
+            <div class="cart-summary">
+                <p id="cart-total">Total: $0.00</p>
+                <button id="checkout-button">Checkout</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Link to the JavaScript file for functionality -->
+    <script src="../scripts/cart.js"></script>
+</body>
+</html>
